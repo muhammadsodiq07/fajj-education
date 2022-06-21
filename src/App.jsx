@@ -15,6 +15,8 @@ import Curriculum from './components/Curriculum/Curriculum';
 import Reports from './components/Reports/Reports';
 import Setting from './components/Setting/Setting';
 import LogOut from './components/LogOut/LogOut';
+import LocationTeacher from './components/LocationTeacher/LocationTeacher';
+import LocationStudents from './components/LocationStudents/LocationStudents';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
       <Route path='reports' element={<Reports />} />
       <Route path='setting' element={<Setting />} />
       <Route path='logout' element={<LogOut />} />
+      <Route path="locationTeacher/:id" element={<LocationTeacher/>} />
+      <Route path="locationStudents/:id" element={<LocationStudents/>} />
     </Routes>
   );
 }

@@ -47,16 +47,13 @@ function GroupTable() {
                   <td>
                     {item.teacher}
                   </td>
-                  <td className='d-flex align-items-center table-td'>
-                    <Link to={`/groups/edit/${item.id}`} className="table-td">
-                      <button className='table-btn'>
-                        <i className='bx bxs-pencil'></i>
-                      </button>
-                    </Link>
-                    <button className="table-btn" onClick={() => cancelHandler(item.id)}>
-                      <i className='bx bx-x'></i>
-                    </button>
-                  </td>
+                  <td className="students__td">
+                  <button className="students__error"><i className='bx bxs-error-circle'></i></button>
+                  <Link to={`/groups/edit/${item.id}`} className="table-td">
+                  <button className="students__edit"><i className="bx bxs-pencil" /></button>
+                  </Link>
+                  <button  onClick={() => cancelHandler(item.id)} className="students__xbtn"><i className="bx bx-x" /></button>
+                </td>
                 </tr>
               )
             })

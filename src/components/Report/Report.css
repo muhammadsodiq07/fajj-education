@@ -1,0 +1,5 @@
+.report__img-box img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=Report.css.map */

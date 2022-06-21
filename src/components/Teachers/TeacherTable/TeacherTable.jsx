@@ -8,72 +8,55 @@ function TeacherTable() {
   const { arr, cancelHandler } = useContext(teacherContext);
 
   return (
-    <div>
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">ISM</th>
-            <th scope="col">GURUH</th>
-            <th scope="col">TELEFON RAQAMI</th>
-            <th scope="col">GURUHLAR</th>
-            <th scope="col">HOLATI</th>
-            <th scope="col">HISOB HOLATI</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            arr.map((item, idx) => {
-              return (
-                <tr key={`bd` + idx}>
-                  <th scope='row'>
-                    {idx+1}
-                  </th>
-                  <td>
-                    {item.name}
-                  </td>
-                  <td>
-                    <span>Guruh #</span>
-                    {item.group.map((el, index) => {
-                      return (
-                        <span key={"dfdf"+index}>
-                          {index > 0 ? <span> / #</span> : ""}
-                            {el} 
-                        </span>
-                      );
-                    })}
-                  </td>
-                  <td>
-                    {item.number}
-                  </td>
-                  <td>
-                    {item.groupNum} <span>ta</span>
-                  </td>
-                  <td>
-                    {item.status}
-                  </td>
-                  <td>
-                    <span>UZS </span>
-                    {item.payment}
-                  </td>
-                  <td className='d-flex align-items-center table-td'>
-                    <Link to={`/teachers/edit/${item.id}`} className="table-td">
-                      <button className='table-btn table-td'>
-                        <i className='bx bxs-pencil'></i>
-                      </button>
-                    </Link>
-                    <button className="table-btn" onClick={() => cancelHandler(item.id)}>
-                      <i className='bx bx-x'></i>
-                    </button>
-                  </td>
-                </tr>
-              )
-            })
-          }
-        </tbody>
-      </table>
-    </div>
+    <table className="students__tabel">
+    <thead className="students__thead">
+      <tr className="students__tr">
+        <th className="students__th"><button className="students__thbtn" id="namebtn"># </button></th>
+        <th className="students__th"><button className="students__thbtn" id="mailbtn">Ismi</button></th>
+        <th className="students__th"><button className="students__thbtn" id="numbtn">Guruh </button></th>
+        <th className="students__th"><button className="students__thbtn" id="depabtn">Telefon Raqam</button></th>
+        <th className="students__th"><button className="students__thbtn">Guruhlar </button></th>
+        <th className="students__th"><button className="students__thbtn">Vaqt </button></th>
+        <th className="students__th"><button className="students__thbtn">holati </button></th>
+        <th className="students__th"><button className="students__thbtn"></button></th>
+      </tr>
+    </thead>  
+    <tbody className="students__body" id="tbody">
+      {
+        arr.map((item, key) => {
+          return(
+            <tr key={key+782} className="students__tr">
+             <td className="students__td">{item.id}</td>
+              <td className="students__td">
+                <div className="d-flex align-items-center">
+                  <div className="students__avabox">
+                    <img className="students__ava" src={item.img} alt="user" />
+                  </div>
+             <Link to={`/locationTeacher/${item.id}`}>
+                  <h3 className="students__names">{item.name}</h3>
+              </Link>
+                </div>
+                </td>
+              <td className="students__td">Guruh #{item.groupNum}</td>
+              <td className="students__td">{item.number}</td>
+              <td className="students__td">{item.group} ta</td>
+              <td className="students__td">Yanvar 26, 2020</td>
+              <td className="students__td">{item.status}</td>
+
+              <td className="students__td">
+                <button className="students__error"><i className='bx bxs-error-circle'></i></button>
+                <Link to={`/teachers/edit/${item.id}`} className="table-td">
+                <button className="students__edit"><i className="bx bxs-pencil" /></button>
+                </Link>
+                <button onClick={() => cancelHandler(item.id)} className="students__xbtn"><i className="bx bx-x" /></button>
+              </td>
+            </tr>
+      
+          )
+        })
+      }
+    </tbody>
+  </table>
   )
 }
 

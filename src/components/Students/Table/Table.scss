@@ -1,24 +1,166 @@
-.table-td{
-  justify-content: end;
-  .bx{
-    font-size: 1.2rem;
-    line-height: 1.5;
+.students {
+  padding: 20px 35px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.753);
   }
-}
 
-.table-btn{
-  border: none;
-  background-color: transparent;
-  padding: 5px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover{
-    background-color: thistle;
+  &__addbtn {
+    background-color: #3B86FF;
+    border: 1px solid #3B86FF;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 15px;
+    margin-left: 15px;
   }
-}
 
-.student__tdn{
-  text-decoration: none;
+  &__form {
+    position: relative;
+    width: 500px;
+    padding-left: 45px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  &__input {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 9px 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.575);
+  }
+
+  &__count {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  /* tabel part */
+
+  &__tabel {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__thead {
+    width: 100%;
+    display: table-header-group;
+  }
+
+  &__tr {
+    width: 100%;
+    display: table-row;
+    background-color: #fff;
+
+    &:hover .list__td {
+      background-color: #fffbf2;
+    }
+  }
+
+  &__th {
+    display: table-cell;
+    background-color: #f5f5fa;
+    padding: 16px;
+  }
+
+  &__thbtn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #bdbcca;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      opacity: 0.6;
+    }
+
+    &:hover .list__ticon {
+      opacity: 0.6;
+    }
+
+  }
+
+  &__ticon {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 0 32px 0 10px;
+    transition: all 0.4s linear;
+    opacity: 0;
+  }
+
+  &__body {
+    display: table-row-group;
+  }
+
+  &__td {
+    display: table-cell;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: #000000c5;
+    padding: 5px 16px;
+    transition: all 0.3s linear;
+  }
+
+  &__avabox {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  &__ava {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__names {
+    font-size: 16px;
+    color: #000000c5;
+  }
+
+  &__edit,
+  &__error,
+  &__xbtn {
+    background:none;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    color: red;
+    padding: 5px;
+    margin: 4px;
+  }
+
+  &__error {
+    color: #ffce7b;
+  }
+
+  &__edit {
+    color: #af85ff;
+  }
+
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Main.scss";
-import { groupObj, teacherObj, studentObj } from '../obj';
+import { groupObj, studentObj } from '../obj';
+import  TeacherObj  from '../TeacherObj';
 import Navbar from './Navbar/Navbar';
 import Header from './Header/Header';
 import { Link } from "react-router-dom";
@@ -42,7 +43,7 @@ function Main() {
                 <div className='main__item-box d-flex'>
                   <div className='main__item-num-box'>
                     <p className='main__item-num'>
-                      {teacherObj.length} nafar
+                      {TeacherObj.length} nafar
                     </p>
                     <div className='main__item-stats green-stats d-flex align-items-center'>
                       <i className='bx bx-up-arrow-alt' ></i>

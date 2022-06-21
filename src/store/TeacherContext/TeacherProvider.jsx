@@ -1,11 +1,11 @@
 import React, { useReducer, useState } from 'react'
 import { createContext } from 'react';
-import { teacherObj } from '../../obj';
+import  TeacherObj  from '../../TeacherObj';
 
 export const teacherContext = createContext();
 
 function TeacherProvider({children}) {
-  let [teachers, setTeachers] = useState(teacherObj);
+  let [teachers, setTeachers] = useState(TeacherObj);
 
   const reducer = (state, action) => {
     switch (action.type) {

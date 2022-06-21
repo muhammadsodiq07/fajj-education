@@ -1,0 +1,138 @@
+.students {
+  padding: 20px 35px;
+  /* tabel part */
+}
+.students__title {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.753);
+}
+.students__addbtn {
+  background-color: #3B86FF;
+  border: 1px solid #3B86FF;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 15px;
+  margin-left: 15px;
+}
+.students__form {
+  position: relative;
+  width: 500px;
+  padding-left: 45px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.students__input {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 9px 5px;
+}
+.students__input:focus {
+  outline: none;
+}
+.students__icons {
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.575);
+}
+.students__count {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.students__tabel {
+  width: 100%;
+  margin-top: 24px;
+}
+.students__thead {
+  width: 100%;
+  display: table-header-group;
+}
+.students__tr {
+  width: 100%;
+  display: table-row;
+  background-color: #fff;
+}
+.students__tr:hover .list__td {
+  background-color: #fffbf2;
+}
+.students__th {
+  display: table-cell;
+  background-color: #f5f5fa;
+  padding: 16px;
+}
+.students__thbtn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #bdbcca;
+  transition: all 0.3s linear;
+}
+.students__thbtn:hover {
+  color: rgba(0, 0, 0, 0.87);
+  opacity: 0.6;
+}
+.students__thbtn:hover .list__ticon {
+  opacity: 0.6;
+}
+.students__ticon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0 32px 0 10px;
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+.students__body {
+  display: table-row-group;
+}
+.students__td {
+  display: table-cell;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  color: rgba(0, 0, 0, 0.7725490196);
+  padding: 5px 16px;
+  transition: all 0.3s linear;
+}
+.students__avabox {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.students__ava {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.students__names {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7725490196);
+}
+.students__edit, .students__error, .students__xbtn {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  color: red;
+  padding: 5px;
+  margin: 4px;
+}
+.students__error {
+  color: #ffce7b;
+}
+.students__edit {
+  color: #af85ff;
+}/*# sourceMappingURL=Table.css.map */

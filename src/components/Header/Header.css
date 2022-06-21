@@ -1,0 +1,47 @@
+.main__header {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header .bx {
+  font-size: 25px;
+  color: #ccc;
+}
+.header .rounded-circle {
+  background-color: yellow !important;
+  padding: 5px !important;
+  transform: translate(-90%, -30%) !important;
+}
+
+.header__info {
+  margin-left: 20px;
+  padding-left: 5px;
+  border-left: 1px solid #ccc;
+}
+.header__info .bx {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.header__name {
+  text-transform: capitalize;
+}
+
+.header__img-box {
+  width: 30px;
+  height: 29px;
+  margin-left: 10px;
+}
+.header__img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}/*# sourceMappingURL=Header.css.map */
